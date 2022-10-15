@@ -1,0 +1,1003 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+p, h1, h2, h3, a, li {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 14pt;
+}
+
+ul {
+  list-style-position: outside;
+  margin-left: 20px;
+  width: 1100px;
+}
+
+a {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+body {
+  display: grid;
+  justify-content: center;
+  background-image: url("img/warzone.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+
+.textAlignCenter {
+  text-align: center;
+}
+
+#container {
+  display: grid;
+  grid-template-rows: 300px 1fr 150px;
+  min-height: 100vh;
+  width: 80vw;
+  max-width: 2500px;
+  box-sizing: border-box;
+}
+
+#header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header img {
+  cursor: pointer;
+  height: 250px;
+}
+
+#main {
+  background-color: #191717;
+  width: 100%;
+}
+
+.header {
+  font-size: 30pt;
+  text-align: center;
+  width: 1100px;
+  margin-bottom: 40px;
+}
+
+.subHeader {
+  font-size: 21pt;
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+
+.text {
+  width: 1100px;
+}
+
+.rulesText {
+  margin-bottom: 15px;
+}
+
+.indexHeader {
+  font-size: 25pt;
+  text-align: center;
+  margin: 60px 0px 30px 0px;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: row;
+  background-color: #111111;
+}
+
+.account, #accountLogedIn {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  height: 70px;
+}
+
+#accountLogedIn {
+  flex-direction: column;
+  width: 160px;
+}
+
+#accountLogedIn:hover #dropDownContent {
+  display: block;
+}
+#accountLogedIn:hover #dropDownContent a {
+  display: block;
+}
+
+#dropDownButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 160px;
+}
+
+#dropDownContent {
+  display: none;
+  position: absolute;
+  background-color: #111111;
+  min-width: 160px;
+  margin-top: 70px;
+  z-index: 1;
+  border-top: 1px solid white;
+}
+#dropDownContent a {
+  text-align: center;
+  padding-top: 25px;
+  height: 45px;
+  width: 160px;
+  display: none;
+  color: white;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+.navbarItems {
+  height: 70px;
+  width: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.navbarItems p {
+  color: white;
+}
+.navbarItems:hover {
+  background-color: black;
+}
+
+#hamburgerMenu, #toggle {
+  display: none;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+#signup {
+  height: 800px;
+  width: 500px;
+}
+
+#mainContent {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  padding: 0px 70px 0px 100px;
+}
+
+#mainContentMedia {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+}
+#mainContentMedia img {
+  height: 150px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+#mainContentLeft {
+  width: calc(100% - 150px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.alignStart {
+  align-items: start !important;
+}
+
+.justifyStart {
+  justify-content: start !important;
+}
+
+.news {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #393939;
+  background-color: #1c1c1c;
+  border-radius: 40px;
+  min-height: 750px;
+  width: 1050px;
+  margin-top: 60px;
+}
+
+.newsCell {
+  display: flex;
+  flex-direction: column;
+  height: 170px;
+  border-bottom: 1px;
+  padding: 30px;
+}
+.newsCell h1 {
+  color: #089E57;
+}
+
+.newsHeader {
+  color: #089E57;
+  text-align: center;
+  font-size: 25pt;
+}
+
+.newsText {
+  width: 1000px;
+}
+
+.newsDateTime {
+  text-align: right;
+  color: #444444;
+  margin-bottom: 6px;
+}
+
+.seeMore {
+  text-decoration: underline;
+  color: #089E57;
+  margin-left: auto;
+}
+
+.calender {
+  width: 1150px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.calender th {
+  background-color: #393939;
+  color: #089E57;
+}
+.calender td {
+  cursor: pointer;
+  background-color: #222222;
+  color: #484848;
+  text-align: center;
+}
+.calender td, .calender th {
+  height: 55px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.lastColumn {
+  border-right: none !important;
+}
+
+#signup, #login, #registerScreenCenter {
+  display: none;
+  flex-direction: column;
+  width: 700px;
+  min-height: 600px;
+  background-color: #111111;
+  border-radius: 40px;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+#signup {
+  height: 720px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+.accountForm {
+  display: flex;
+  height: 600px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.accountForm input[type=submit] {
+  height: 60px;
+  width: 170px;
+  background-color: #27282b;
+  border: none;
+  border-radius: 15px;
+  color: #BFD2FF;
+  font-size: 15pt;
+}
+.accountForm select {
+  flex-grow: 1;
+  width: 210px;
+  height: 60px;
+  background-color: rgba(39, 40, 43, 0.5);
+  border: none;
+  color: #BFD2FF;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  vertical-align: middle;
+  margin-bottom: 30px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+}
+.accountForm img {
+  height: 200px;
+  margin-bottom: 30px;
+}
+
+#signupform {
+  height: 700px;
+  margin-top: 20px;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  height: 20px;
+  margin: 0 auto;
+  border-radius: 2px;
+  padding: 1.4rem 2rem 1.6rem;
+  background: rgba(39, 40, 43, 0.5);
+  margin-bottom: 30px;
+  border-radius: 15px 15px 0px 0px;
+}
+.inputWrapper:after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 999;
+  height: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-position: 0% 0%;
+  background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6);
+  background-size: 500% auto;
+  animation: gradient 3s linear infinite;
+}
+.inputWrapper input[type=text], .inputWrapper input[type=password] {
+  flex-grow: 1;
+  width: 500px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  color: #7881A1;
+  font-size: 1.1rem;
+  line-height: 2.4rem;
+  vertical-align: middle;
+}
+.inputWrapper input[type=text]::-webkit-input-placeholder, .inputWrapper input[type=password]::-webkit-input-placeholder {
+  color: #7881A1;
+}
+
+.close {
+  height: 20px;
+  width: 20px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.checkboxText {
+  font-size: 10pt;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.formFeedback {
+  color: red;
+  font-size: 10pt;
+  margin-top: 14px;
+}
+
+.pointsTable th, .pointsTable td {
+  width: 400px;
+  height: 30px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.pointsTable th {
+  background-color: #3b3b3b;
+}
+.pointsTable td {
+  background-color: grey;
+  color: #272727;
+  text-align: center;
+  font-size: 11pt;
+}
+
+.gamemodeTypeMain {
+  display: flex;
+  width: 900px;
+  height: 400px;
+  margin-bottom: 50px;
+}
+
+.gamemodeType {
+  width: 900px;
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.gamemodeTypeOverlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  position: absolute;
+}
+.gamemodeTypeOverlay h1 {
+  font-size: 40pt;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.registerButton {
+  cursor: pointer;
+}
+
+.signupCell {
+  display: flex;
+  flex-direction: column;
+  height: 110px;
+  width: 1000px;
+  background-color: #0e0e18;
+  padding: 20px 0px 20px 0px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+.signupCell p {
+  width: 20vw;
+  text-align: center;
+}
+
+.signupHeader {
+  display: flex;
+  flex-direction: row;
+  width: 1000px;
+  height: 20px;
+}
+.signupHeader p {
+  font-weight: bolder;
+  font-size: 16pt;
+  height: 35px;
+}
+
+.signupInformation {
+  display: flex;
+  flex-direction: row;
+  width: 1000px;
+  height: 70px;
+}
+.signupInformation p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15pt;
+  height: 70px;
+}
+
+.blackScreen {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  min-height: 100%;
+  z-index: 2;
+  position: absolute;
+}
+
+#registerOverview, #loginToRegister {
+  display: flex;
+  padding-top: 50px;
+  flex-direction: row;
+  justify-content: center;
+  height: 200px;
+  width: 700px;
+}
+#registerOverview p, #loginToRegister p {
+  font-size: 21pt;
+}
+
+#registerMessage {
+  width: 700px;
+}
+
+#loginToRegister {
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.registerOverviewCell {
+  height: 300px;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+#extraMembers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 350px;
+}
+#extraMembers input[type=text] {
+  width: 500px;
+  height: 30px;
+}
+
+#payment {
+  display: flex;
+  justify-content: center;
+  height: 70px;
+  width: 700px;
+}
+
+#checkoutButton {
+  height: 70px;
+  width: 200px;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  border: 2px solid mediumspringgreen;
+  cursor: pointer;
+}
+
+#footer {
+  background-color: #191717;
+  display: flex;
+  padding: 0px 50px 0px 50px;
+  align-items: center;
+}
+
+.footerContact {
+  margin-left: auto;
+}
+.footerContact a {
+  color: blue;
+  text-decoration: underline;
+}
+
+@media all and (max-width: 1750px) {
+  #container {
+    width: 100vw;
+  }
+
+  .calender {
+    width: 1000px;
+  }
+}
+@media all and (max-width: 1400px) {
+  .signupCell {
+    width: 900px;
+    height: 90px;
+  }
+  .signupCell p {
+    font-size: 13pt;
+    width: 133.3px;
+  }
+
+  #mainContentMedia {
+    width: 100px;
+  }
+  #mainContentMedia img {
+    height: 100px;
+    width: 100px;
+  }
+
+  #mainContent {
+    padding: 0px 0px 0px 40px;
+  }
+
+  .calender {
+    width: 900px;
+  }
+
+  .news {
+    width: 900px;
+  }
+
+  .newsText {
+    width: 850px;
+  }
+
+  .text, .rulesText, ul, li {
+    width: 1000px;
+  }
+}
+@media all and (max-width: 1200px) {
+  #header img {
+    height: 220px;
+  }
+
+  #navbar {
+    flex-direction: column;
+  }
+
+  .signupCell {
+    width: 600px;
+    height: 80px;
+  }
+  .signupCell p {
+    font-size: 10pt;
+    width: 100px;
+  }
+
+  #hamburgerMenu {
+    display: block;
+    font-size: 30pt;
+    color: white;
+    margin-left: 20px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .account {
+    height: 90px;
+  }
+
+  .nav, .account {
+    flex-direction: column;
+    margin: 0px;
+  }
+  .nav a, .nav p, .account a, .account p {
+    text-align: center;
+    font-size: 16pt;
+    width: 100vw;
+  }
+
+  .navbarItems {
+    width: 100vw;
+  }
+
+  #toggle:checked + .nav {
+    display: flex;
+  }
+
+  .gamemodeTypeMain, .gamemodeTypeOverlay, .gamemodeType {
+    height: 300px;
+    width: 650px;
+  }
+
+  #mainContentMedia {
+    flex-direction: row;
+    width: 100vw;
+    margin-top: 50px;
+  }
+  #mainContentMedia img {
+    margin-left: calc((100vw - 300px) / 4);
+  }
+
+  .alignStart {
+    align-items: center !important;
+  }
+
+  .justifyStart {
+    justify-content: center;
+  }
+
+  #mainContent {
+    flex-direction: column;
+    padding: 0px;
+    justify-content: center;
+    align-items: center !important;
+  }
+
+  #mainContentLeft {
+    width: 100vw;
+    margin-bottom: 20px;
+  }
+
+  .calender {
+    width: 800px;
+  }
+
+  .news {
+    width: 800px;
+  }
+
+  .newsText {
+    width: 750px;
+  }
+
+  .text, .rulesText, ul, li {
+    width: 1000px;
+  }
+
+  .pointsTable {
+    width: 700px;
+  }
+}
+@media all and (max-width: 1050px) {
+  #header img {
+    height: 200px;
+  }
+
+  .text, .rulesText, ul, li {
+    width: 800px;
+  }
+}
+@media all and (max-width: 850px) {
+  .calender {
+    width: 600px;
+  }
+  .calender td, .calender th {
+    font-size: 11pt;
+  }
+
+  .navbarItems {
+    height: 40px;
+  }
+  .navbarItems p {
+    font-size: 14pt;
+  }
+
+  #login, #signup {
+    height: 700px;
+  }
+
+  #login, #signup, #registerScreenCenter {
+    width: 500px;
+  }
+
+  #registerOverview, #registerMessage {
+    width: 400px;
+  }
+  #registerOverview p, #registerMessage p {
+    font-size: 16pt;
+  }
+
+  .inputWrapper {
+    width: 450px;
+    height: 13px;
+  }
+  .inputWrapper input[type=text] {
+    height: 13px;
+  }
+
+  .news {
+    width: 600px;
+  }
+  .news p, .news a {
+    font-size: 10pt;
+  }
+
+  .newsText {
+    width: 550px;
+  }
+
+  .newsHeader, .indexHeader {
+    font-size: 20pt;
+  }
+
+  .text, .rulesText, ul, li {
+    width: 750px;
+  }
+
+  .pointsTable {
+    width: 500px;
+  }
+
+  #footer p, #footer a {
+    font-size: 10pt;
+  }
+}
+@media all and (max-width: 700px) {
+  #header img {
+    height: 180px;
+  }
+
+  .signupCell {
+    width: 450px;
+    height: 70px;
+  }
+  .signupCell p {
+    font-size: 9pt;
+    width: 75px;
+  }
+
+  .gamemodeTypeMain, .gamemodeTypeOverlay, .gamemodeType {
+    height: 250px;
+    width: 450px;
+  }
+  .gamemodeTypeMain h1, .gamemodeTypeOverlay h1, .gamemodeType h1 {
+    font-size: 30pt;
+  }
+
+  .calender {
+    width: 500px;
+  }
+  .calender td, .calender th {
+    font-size: 9pt;
+  }
+
+  #login, #signup {
+    height: 700px;
+  }
+
+  #login, #signup, #registerScreenCenter {
+    width: 400px;
+  }
+
+  .inputWrapper {
+    width: 350px;
+  }
+
+  .news {
+    width: 500px;
+  }
+  .news p, .news a {
+    font-size: 10pt;
+  }
+
+  .newsText {
+    width: 450px;
+  }
+
+  .text, .rulesText, ul, li {
+    width: 480px;
+  }
+
+  .pointsTable {
+    width: 360px;
+  }
+
+  #footer p, #footer a {
+    font-size: 8pt;
+  }
+}
+@media all and (max-width: 520px) {
+  #header img {
+    height: 170px;
+    height: 170px;
+  }
+
+  .signupCell {
+    width: 400px;
+    height: 40px;
+  }
+  .signupCell p {
+    height: 30px;
+    font-size: 6pt;
+    width: 66.6px;
+  }
+
+  #mainContentMedia img {
+    height: 70px;
+    width: 70px;
+    margin-left: calc((100vw - 210px) / 4);
+  }
+
+  .gamemodeTypeMain, .gamemodeTypeOverlay, .gamemodeType {
+    height: 230px;
+    width: 400px;
+  }
+
+  .calender {
+    width: 400px;
+  }
+  .calender td, .calender th {
+    font-size: 8pt;
+  }
+
+  #login, #signup {
+    height: 700px;
+  }
+
+  #login, #signup, #registerScreenCenter {
+    width: 280px;
+  }
+
+  .inputWrapper {
+    width: 230px;
+  }
+
+  #registerOverview, #registerMessage {
+    width: 280px;
+  }
+  #registerOverview p, #registerMessage p {
+    font-size: 14pt;
+  }
+
+  .news {
+    width: 400px;
+  }
+  .news p, .news a {
+    font-size: 9pt;
+  }
+
+  .newsText {
+    width: 350px;
+  }
+
+  .newsHeader, .indexHeader {
+    font-size: 20pt;
+  }
+
+  .text, .rulesText, ul, li {
+    width: 400px;
+  }
+
+  .pointsTable {
+    width: 340px;
+  }
+
+  #footer p, #footer a {
+    font-size: 7pt;
+  }
+}
+@media all and (max-width: 440px) {
+  .signupCell {
+    width: 350px;
+    height: 40px;
+  }
+  .signupCell p {
+    height: 30px;
+    font-size: 6pt;
+    width: 58.3px;
+  }
+
+  .gamemodeTypeMain, .gamemodeTypeOverlay, .gamemodeType {
+    height: 200px;
+    width: 300px;
+  }
+  .gamemodeTypeMain h1, .gamemodeTypeOverlay h1, .gamemodeType h1 {
+    font-size: 20pt;
+  }
+
+  .calender {
+    width: 300px;
+  }
+  .calender td, .calender th {
+    font-size: 7pt;
+  }
+
+  .news {
+    width: 300px;
+  }
+  .news p, .news a {
+    font-size: 8pt;
+  }
+
+  .newsText {
+    width: 250px;
+  }
+
+  .newsCell {
+    height: 200px;
+  }
+
+  .text, .rulesText, ul, li {
+    width: 300px;
+  }
+
+  .pointsTable {
+    width: 250px;
+  }
+
+  #footer p, #footer a {
+    font-size: 6pt;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
